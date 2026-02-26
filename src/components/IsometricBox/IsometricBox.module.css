@@ -100,3 +100,51 @@
   border-radius: 999px;
   pointer-events: none;
 }
+
+.scene{
+  position: relative; /* مهم */
+  --s: 260px;
+  --d: 130px;
+  --r: 18px;
+
+  --shadowScale: 1.12;
+  --shadowBlur: 16px;
+  --shadowOpacity: 0.30;
+
+  width: var(--s);
+  height: var(--s);
+  display: grid;
+  place-items: center;
+}
+
+.groundShadow{
+  position: absolute;
+  left: 50%;
+  top: 72%;
+  width: calc(var(--s) * var(--shadowScale));
+  height: calc(var(--s) * 0.55);
+  transform: translateX(-50%);
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 0;
+
+  /* سایه دو لایه برای واقعی‌تر شدن */
+  background:
+    radial-gradient(closest-side, rgba(0,0,0, calc(var(--shadowOpacity) * 1.05)), transparent 68%),
+    radial-gradient(closest-side, rgba(0,0,0, calc(var(--shadowOpacity) * 0.55)), transparent 78%);
+  filter: blur(var(--shadowBlur));
+}
+
+.bob{ z-index: 1; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; }
+
+.cube{
+  position: relative;
+  width: var(--s);
+  height: var(--s);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* بقیه face ها همون قبلی */
