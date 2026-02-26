@@ -1,0 +1,102 @@
+.scene {
+  --s: 260px;
+  --d: 130px; /* depth */
+  --r: 18px;  /* radius */
+
+  width: var(--s);
+  height: var(--s);
+  display: grid;
+  place-items: center;
+}
+
+/* لایه bob جداست */
+.bob {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.cube {
+  position: relative;
+  width: var(--s);
+  height: var(--s);
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* هر وجه */
+.face {
+  position: absolute;
+  inset: 0;
+
+  display: grid;
+  place-items: center;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  border-radius: var(--r);
+  overflow: hidden;
+
+  outline: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.10),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.10);
+}
+
+.face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  user-select: none;
+  pointer-events: none;
+
+  /* ضد z-fighting */
+  transform: translateZ(0.6px);
+}
+
+/* شیدینگ نرم */
+.face::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(0,0,0,0.18));
+  mix-blend-mode: overlay;
+  opacity: 0.75;
+}
+
+/* جای‌گذاری ۶ وجه با depth متغیر */
+.front  { transform: translateZ(var(--d)); }
+.back   { transform: rotateY(180deg) translateZ(var(--d)); }
+
+.right  { transform: rotateY(90deg) translateZ(var(--d)); }
+.left   { transform: rotateY(-90deg) translateZ(var(--d)); }
+
+.top    { transform: rotateX(90deg) translateZ(var(--d)); }
+.bottom { transform: rotateX(-90deg) translateZ(var(--d)); }
+
+.top::after { opacity: 0.45; }
+.front::after, .right::after { opacity: 0.9; }
+
+/* سایه جدا با filter */
+.shadow {
+  position: absolute;
+  left: 50%;
+  top: 72%;
+  width: 112%;
+  height: 58%;
+  transform: translateX(-50%) translateZ(-1px);
+  background: radial-gradient(closest-side, rgba(0,0,0,0.28), transparent 70%);
+  filter: blur(10px);
+  opacity: 0.9;
+  border-radius: 999px;
+  pointer-events: none;
+}

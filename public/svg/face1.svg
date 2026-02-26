@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #234668;
+      }
+
+      .cls-2 {
+        mask: url(#mask-1);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        mask: url(#mask);
+      }
+
+      .cls-5 {
+        fill: #0d1621;
+      }
+
+      .cls-6 {
+        fill: #0d101f;
+      }
+
+      .cls-7 {
+        fill: #172333;
+      }
+
+      .cls-8 {
+        fill: #4b5d79;
+      }
+
+      .cls-9 {
+        fill: none;
+        stroke: #172333;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+    <mask id="mask" x="87.98" y="90.06" width="322.26" height="319.88" maskUnits="userSpaceOnUse">
+      <rect class="cls-3" x="90.06" y="90.06" width="319.88" height="319.88" rx="26.08" ry="26.08"/>
+    </mask>
+    <mask id="mask-1" x="87.98" y="90.06" width="322.26" height="319.88" maskUnits="userSpaceOnUse">
+      <rect class="cls-3" x="90.06" y="90.06" width="319.88" height="319.88" rx="26.08" ry="26.08"/>
+    </mask>
+  </defs>
+  <rect class="cls-8" width="500" height="500"/>
+  <path class="cls-7" d="M348.26,0l-17.52,19.45c-2.75,3.05-6.65,4.8-10.77,4.8h-140.48c-4.1,0-8.02-1.75-10.77-4.8L151.74.61h194.69l1.82-.61Z"/>
+  <path class="cls-7" d="M151.74,500l17.52-19.45c2.75-3.05,6.65-4.8,10.77-4.8h140.48c4.1,0,8.02,1.75,10.77,4.8l16.97,18.84h-194.69l-1.82.61Z"/>
+  <rect class="cls-7" x="90.06" y="90.06" width="319.88" height="319.88" rx="26.08" ry="26.08"/>
+  <g class="cls-4">
+    <path class="cls-5" d="M410.24,409.94h-8.45V112.83c0-8.1-6.83-14.66-15.26-14.66H87.98v-8.11h298.55c13.09,0,23.71,10.19,23.71,22.77v297.11Z"/>
+  </g>
+  <line class="cls-9" x1="250" y1="24.25" x2="250" y2="90.06"/>
+  <line class="cls-9" x1="282.22" y1="406.08" x2="282.22" y2="475.75"/>
+  <line class="cls-9" x1="500" y1="197.66" x2="409.94" y2="197.66"/>
+  <line class="cls-9" x1="90.06" y1="197.66" y2="197.66"/>
+  <path class="cls-9" d="M0,274.6h11.67c23.76,0,43.02,19.26,43.02,43.02v182.38"/>
+  <g>
+    <circle class="cls-6" cx="27.35" cy="447.1" r="10.04"/>
+    <circle class="cls-6" cx="27.35" cy="479.96" r="10.04"/>
+  </g>
+  <g class="cls-2">
+    <path class="cls-1" d="M87.98,90.06h8.45v297.11c0,8.1,6.83,14.66,15.26,14.66h298.55v8.11H111.68c-13.09,0-23.71-10.19-23.71-22.77V90.06Z"/>
+  </g>
+  <path class="cls-3" d="M298.32,178.75h-96.42c-17.58,0-28.63,19.08-20.09,34.65l59.26,102.95c4.02,6.53,13.56,6.53,17.58,0l59.26-102.95c9.04-15.57-2.01-34.65-19.59-34.65h0ZM241.57,285.22l-13.06-25.11-31.14-55.74c-2.01-3.52.5-8.04,5.02-8.04h39.17v88.89h0ZM302.84,204.36l-31.14,55.74-13.06,25.11v-88.89h39.17c4.52,0,7.03,4.52,5.02,8.04Z"/>
+</svg>
