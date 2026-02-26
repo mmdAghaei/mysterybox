@@ -9,7 +9,7 @@ export default function IsometricBox({
   radius = 18,
   perspective = 1200,
   perspectiveOrigin = '50% 42%',
-
+  folder = "svg",
   tiltX = -55,
   tiltY = 45,
 
@@ -57,9 +57,9 @@ export default function IsometricBox({
         animate={
           float
             ? {
-                scale: [1, 0.92, 1],
-                opacity: [shadowOpacity, shadowOpacity * 0.65, shadowOpacity],
-              }
+              scale: [1, 0.92, 1],
+              opacity: [shadowOpacity, shadowOpacity * 0.65, shadowOpacity],
+            }
             : { scale: 1, opacity: shadowOpacity }
         }
         transition={
@@ -81,12 +81,12 @@ export default function IsometricBox({
           animate={{ ...rotateAnim, rotateX: tiltX, opacity: 1, y: 0 }}
           transition={{ ...rotateTrans, opacity: { duration: 0.25 }, y: { duration: 0.25 } }}
         >
-          <div className={`${styles.face} ${styles.top}`}><img src="/svg/face1.svg" alt="" draggable={false} /></div>
-          <div className={`${styles.face} ${styles.bottom}`}><img src="/svg/face2.svg" alt="" draggable={false} /></div>
-          <div className={`${styles.face} ${styles.front}`}><img src="/svg/face3.svg" alt="" draggable={false} /></div>
-          <div className={`${styles.face} ${styles.back}`}><img src="/svg/face4.svg" alt="" draggable={false} /></div>
-          <div className={`${styles.face} ${styles.right}`}><img src="/svg/face5.svg" alt="" draggable={false} /></div>
-          <div className={`${styles.face} ${styles.left}`}><img src="/svg/face6.svg" alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.top}`}><img src={`/${folder}/face1.svg`} alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.bottom}`}><img src={`/${folder}/face2.svg`} alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.front}`}><img src={`/${folder}/face3.svg`} alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.back}`}><img src={`/${folder}/face4.svg`} alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.right}`}><img src={`/${folder}/face5.svg`} alt="" draggable={false} /></div>
+          <div className={`${styles.face} ${styles.left}`}><img src={`/${folder}/face6.svg`} alt="" draggable={false} /></div>
         </motion.div>
       </motion.div>
     </div>

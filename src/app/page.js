@@ -1,24 +1,21 @@
-
+"use client";
 import IsometricBox from '@/components/IsometricBox/IsometricBox';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Page() {
+  const router = useRouter();
+  useEffect(
+    () => {
+      router.replace("/home");
+
+    }
+  );
 
   return (
     <main style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', gap: 16, padding: 24, backgroundColor: "red" }}>
-      <IsometricBox
-        size={183}
-        depth={91}
-        radius={0}
-        tiltX={-20}
-        tiltY={41}
-        duration={16}
-        autoRotate={true}
-        shadowBlur={18}
-        shadowOpacity={0}
-        shadowScale={1.18}
-      />
 
-      
+
     </main>
   );
 }
